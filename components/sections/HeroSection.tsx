@@ -250,7 +250,7 @@ export function HeroSection() {
           {[
             { value: '700M+', label: 'En pobreza extrema' },
             { value: '1/10', label: 'De la poblacion mundial' },
-            { value: '2017', label: 'Reconocida en Espana' },
+            { value: '2017', label: 'Reconocida en España' },
           ].map((stat, i) => (
             <motion.div
               key={i}
