@@ -17,6 +17,7 @@ export function Navigation() {
 
   const navLinks = [
     { label: 'Inicio', href: '#hero-section' },
+    { label: 'Que es', href: '#what-is-section' },
     { label: 'Ejemplos', href: '#examples-section' },
     { label: 'Acciones', href: '#action-section' },
   ]
