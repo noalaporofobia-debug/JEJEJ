@@ -40,7 +40,7 @@ export function Footer() {
             Inicio
           </motion.a>
           <motion.a 
-            href="#what-is-section" 
+            href="#examples-section" 
             className="smooth-transition hover:text-accent-light group" 
             style={{ color: '#9ca3af' }}
             whileHover={{ scale: 1.1 }}
@@ -72,7 +72,7 @@ export function Footer() {
             © {currentYear} No a la Aporofobia. Todos los derechos reservados.
           </p>
           <p className="text-xs" style={{ color: '#6b7280' }}>
-            Promoviendo conciencia sobre la discriminación económica
+            Generando conciencia sobre la discriminacion economica
           </p>
         </div>
       </motion.div>

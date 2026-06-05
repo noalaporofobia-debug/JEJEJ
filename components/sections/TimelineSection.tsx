@@ -9,7 +9,7 @@ export function TimelineSection() {
     <section
       className="section-container"
       role="region"
-      aria-label="Línea de tiempo histórica de aporofobia"
+      aria-label="Linea de tiempo historica de aporofobia"
     >
       <motion.div
         variants={staggerContainerVariants}
@@ -20,10 +20,10 @@ export function TimelineSection() {
       >
         <div className="text-center space-y-4">
           <motion.h2 variants={staggerCardVariants} className="text-5xl font-bold" style={{ color: '#ffffff' }}>
-            <span className="gradient-text">Línea de Tiempo</span> Histórica
+            <span className="gradient-text">Linea de Tiempo</span> Historica
           </motion.h2>
           <motion.p variants={staggerCardVariants} style={{ color: '#f0f0f0' }}>
-            Hitos importantes en la lucha contra la aporofobia y la desigualdad
+            Momentos importantes en la lucha contra la aporofobia y la desigualdad
           </motion.p>
         </div>
 

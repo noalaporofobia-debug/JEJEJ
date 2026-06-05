@@ -26,7 +26,7 @@ export function SocialSection() {
     <section 
       className="section-container bg-gradient-to-b from-transparent via-accent-dark/5 to-transparent"
       role="region"
-      aria-label="Únete a la conversación en redes sociales"
+      aria-label="Siguenos en redes sociales"
     >
       <motion.div
         initial="hidden"
@@ -39,10 +39,10 @@ export function SocialSection() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4" style={{ color: '#ffffff' }}>
-            Únete a la <span className="gradient-text">Conversación</span>
+            Seguinos en <span className="gradient-text">Redes</span>
           </h2>
           <p className="text-lg max-w-2xl mx-auto" style={{ color: '#f0f0f0' }}>
-            Síguenos en redes sociales para mantenerte informado y ser parte del cambio.
+            Seguinos en redes sociales para estar al tanto y ser parte del cambio.
           </p>
         </motion.div>
 
@@ -71,7 +71,7 @@ export function SocialSection() {
           className="mt-16 p-8 glass glass-hover text-center max-w-2xl mx-auto"
         >
           <p className="text-sm md:text-base" style={{ color: '#d1d5db' }}>
-            Comparte tu historia. Aprende de otros. <span style={{ color: '#3b82f6', fontWeight: 'bold' }}>Juntos construimos una sociedad sin aporofobia.</span>
+            Comparti tu historia. Aprende de otros. <span style={{ color: '#3b82f6', fontWeight: 'bold' }}>Juntos construimos una sociedad sin aporofobia.</span>
           </p>
         </motion.div>
       </motion.div>

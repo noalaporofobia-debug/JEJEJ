@@ -70,7 +70,7 @@ export function ExamplesSection() {
     {
       icon: '🏠',
       title: 'Vivienda',
-      description: 'Discriminacion al acceder a un hogar por falta de recursos economicos o historial crediticio.',
+      description: 'Discriminacion para acceder a un hogar por falta de plata o historial crediticio.',
       stats: '40%',
       statsLabel: 'sin hogar estable',
       gradient: 'from-orange-500 to-red-500',
@@ -80,13 +80,13 @@ export function ExamplesSection() {
       title: 'Educacion',
       description: 'Estigmatizacion en escuelas por no poder acceder a recursos educativos o materiales caros.',
       stats: '258M',
-      statsLabel: 'ninos sin escuela',
+      statsLabel: 'chicos sin escuela',
       gradient: 'from-blue-500 to-purple-500',
     },
     {
       icon: '💼',
       title: 'Empleo',
-      description: 'Rechazos en entrevistas basados en apariencia, codigo postal o antecedentes socioeconomicos.',
+      description: 'Rechazos en entrevistas basados en apariencia, barrio o situacion socioeconomica.',
       stats: '67%',
       statsLabel: 'desempleo juvenil',
       gradient: 'from-green-500 to-teal-500',
@@ -94,7 +94,7 @@ export function ExamplesSection() {
     {
       icon: '🏥',
       title: 'Salud',
-      description: 'Trato discriminatorio en centros de salud o denegacion de servicios por falta de pago.',
+      description: 'Trato discriminatorio en centros de salud o negacion de servicios por no poder pagar.',
       stats: '400M',
       statsLabel: 'sin atencion medica',
       gradient: 'from-pink-500 to-rose-500',
@@ -103,6 +103,7 @@ export function ExamplesSection() {
 
   return (
     <section 
+      id="examples-section"
       className="section-container relative overflow-hidden"
       role="region"
       aria-label="Ejemplos en la vida real"
@@ -155,17 +156,10 @@ export function ExamplesSection() {
           >
             Ejemplos en la{' '}
             <motion.span 
-              className="gradient-text inline-block relative"
+              className="gradient-text inline-block"
               whileHover={{ scale: 1.05 }}
             >
               Vida Real
-              <motion.span
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              />
             </motion.span>
           </motion.h2>
 
@@ -174,7 +168,7 @@ export function ExamplesSection() {
             className="text-lg md:text-xl max-w-2xl mx-auto"
             style={{ color: '#9ca3af' }}
           >
-            La aporofobia se manifiesta en multiples aspectos de la sociedad
+            La aporofobia se ve en muchos aspectos de la sociedad
           </motion.p>
         </motion.div>
 
@@ -245,55 +239,13 @@ export function ExamplesSection() {
                   {example.description}
                 </p>
 
-                {/* Bottom progress bar */}
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
-                >
-                  <div className={`h-full bg-gradient-to-r ${example.gradient}`} />
-                </motion.div>
+
               </motion.div>
             </TiltCard>
           ))}
         </div>
 
-        {/* Call to action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-xl font-semibold text-white relative overflow-hidden group"
-            style={{
-              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2))',
-              border: '1px solid rgba(59, 130, 246, 0.3)',
-            }}
-          >
-            <motion.span
-              className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"
-              initial={{ x: '-100%' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.5 }}
-            />
-            <span className="relative z-10 flex items-center gap-2">
-              Ver mas ejemplos
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
-                →
-              </motion.span>
-            </span>
-          </motion.button>
-        </motion.div>
+
       </motion.div>
     </section>
   )

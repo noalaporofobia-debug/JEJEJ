@@ -137,14 +137,7 @@ export function WhatIsSection() {
                 style={{ background: `radial-gradient(circle, ${item.color}20, transparent)` }}
               />
               
-              {/* Animated border on hover */}
-              <motion.div
-                className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
-                style={{ 
-                  border: `1px solid ${item.color}40`,
-                  boxShadow: `inset 0 0 30px ${item.color}10`,
-                }}
-              />
+
 
               {/* Number badge with animation */}
               <motion.div 
@@ -175,13 +168,9 @@ export function WhatIsSection() {
                 </div>
               </motion.div>
 
-              {/* Title with underline animation */}
+              {/* Title */}
               <h3 className="text-xl md:text-2xl font-semibold mb-4 relative inline-block" style={{ color: item.color }}>
                 {item.title}
-                <motion.span
-                  className="absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-300"
-                  style={{ background: item.color }}
-                />
               </h3>
 
               {/* Description */}
@@ -189,23 +178,7 @@ export function WhatIsSection() {
                 {item.description}
               </p>
 
-              {/* Learn more link */}
-              <motion.div
-                className="mt-4 flex items-center gap-2 text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                style={{ color: item.color }}
-              >
-                <span>Saber mas</span>
-                <motion.svg
-                  className="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  animate={{ x: [0, 5, 0] }}
-                  transition={{ duration: 1, repeat: Infinity }}
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                </motion.svg>
-              </motion.div>
+
             </motion.div>
           ))}
         </div>

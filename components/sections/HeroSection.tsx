@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
-import { floatVariants, bounceInVariants, pulseVariants } from '../animations'
 
 // Particulas flotantes
 function FloatingParticles() {
@@ -149,12 +148,6 @@ export function HeroSection() {
   
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9])
-
-  const scrollToNext = () => {
-    const element = document.getElementById('what-is-section')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -202,39 +195,10 @@ export function HeroSection() {
       </div>
 
       <motion.div
-        style={{ y, opacity, scale }}
+        style={{ y, opacity }}
         className="text-center max-w-5xl mx-auto z-10"
       >
-        {/* Badge animado */}
-        <motion.div
-          initial={{ opacity: 0, y: -20, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8 inline-block"
-        >
-          <motion.span
-            className="px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2"
-            style={{
-              background: 'rgba(59, 130, 246, 0.1)',
-              border: '1px solid rgba(59, 130, 246, 0.3)',
-              color: '#3b82f6',
-            }}
-            animate={{
-              boxShadow: [
-                '0 0 0 0 rgba(59, 130, 246, 0.4)',
-                '0 0 0 10px rgba(59, 130, 246, 0)',
-              ],
-            }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <motion.span
-              className="w-2 h-2 rounded-full bg-blue-500"
-              animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-            Proyecto de Conciencia Social 2026
-          </motion.span>
-        </motion.div>
+
 
         {/* Titulo principal con efecto parallax del mouse */}
         <motion.div
@@ -272,7 +236,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 2 }}
             className="gradient-text font-semibold"
           >
-            Aprende que es y como combatirla.
+            Enterate que es y como combatirla.
           </motion.span>
         </motion.p>
 
@@ -286,7 +250,7 @@ export function HeroSection() {
           {[
             { value: '700M+', label: 'En pobreza extrema' },
             { value: '1/10', label: 'De la poblacion mundial' },
-            { value: '2017', label: 'Reconocida en Espana' },
+            { value: '2017', label: 'Reconocida en España' },
           ].map((stat, i) => (
             <motion.div
               key={i}
@@ -302,105 +266,9 @@ export function HeroSection() {
           ))}
         </motion.div>
 
-        {/* Botones de accion */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-        >
-          <motion.button
-            whileHover={{ 
-              scale: 1.05, 
-              boxShadow: '0 20px 40px rgba(59, 130, 246, 0.4)',
-            }}
-            whileTap={{ scale: 0.95 }}
-            onClick={scrollToNext}
-            className="button-primary text-lg px-8 py-4 relative overflow-hidden group"
-            aria-label="Conocer mas sobre aporofobia"
-          >
-            <motion.span
-              className="absolute inset-0 bg-white/20"
-              initial={{ x: '-100%', skewX: '-15deg' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.5 }}
-            />
-            <span className="relative z-10 flex items-center gap-2">
-              Descubre mas
-              <motion.svg 
-                className="w-5 h-5" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </motion.svg>
-            </span>
-          </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: 'rgba(59, 130, 246, 0.1)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-lg font-semibold border border-white/20 text-white/80 hover:text-white transition-all"
-          >
-            Ver estadisticas
-          </motion.button>
-        </motion.div>
 
-        {/* Scroll indicator mejorado */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 3.5 }}
-          className="mt-16 md:mt-24 flex flex-col items-center gap-2"
-        >
-          <motion.span
-            className="text-xs uppercase tracking-widest"
-            style={{ color: '#6b7280' }}
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            Scroll para explorar
-          </motion.span>
-          <motion.button
-            onClick={scrollToNext}
-            className="p-3 rounded-full relative"
-            style={{
-              border: '2px solid rgba(59, 130, 246, 0.3)',
-              background: 'rgba(59, 130, 246, 0.05)',
-            }}
-            whileHover={{ scale: 1.1, borderColor: 'rgba(59, 130, 246, 0.6)' }}
-            aria-label="Desplazarse hacia abajo"
-          >
-            <motion.div
-              className="absolute inset-0 rounded-full"
-              style={{ border: '2px solid rgba(59, 130, 246, 0.5)' }}
-              animate={{
-                scale: [1, 1.5, 1.5],
-                opacity: [0.5, 0, 0],
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <motion.svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              style={{ color: '#3b82f6' }}
-              animate={{ y: [0, 5, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </motion.svg>
-          </motion.button>
-        </motion.div>
+
       </motion.div>
     </section>
   )

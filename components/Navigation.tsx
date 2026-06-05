@@ -17,9 +17,7 @@ export function Navigation() {
 
   const navLinks = [
     { label: 'Inicio', href: '#hero-section' },
-    { label: 'Qué es', href: '#what-is-section' },
     { label: 'Ejemplos', href: '#examples-section' },
-    { label: 'Impacto', href: '#impact-section' },
     { label: 'Acciones', href: '#action-section' },
   ]
 
@@ -51,28 +49,16 @@ export function Navigation() {
             <motion.a
               key={i}
               href={link.href}
-              whileHover={{ y: -2 }}
+              whileHover={{ y: -2, color: '#3b82f6' }}
               className="transition-colors duration-300"
               style={{ color: '#f0f0f0' }}
-              onHoverStart={(e) => {
-                ;(e.currentTarget as HTMLElement).style.color = '#3b82f6'
-              }}
-              onHoverEnd={(e) => {
-                ;(e.currentTarget as HTMLElement).style.color = '#f0f0f0'
-              }}
             >
               {link.label}
             </motion.a>
           ))}
         </div>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="button-primary text-sm"
-        >
-          Únete
-        </motion.button>
+
       </div>
     </motion.nav>
   )

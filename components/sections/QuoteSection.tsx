@@ -15,7 +15,7 @@ export function QuoteSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0])
   const rotate = useTransform(scrollYProgress, [0, 1], [-5, 5])
 
-  const quote = "La dignidad humana no depende del dinero."
+  const quote = "La dignidad humana no depende de la plata."
 
   return (
     <section 

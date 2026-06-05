@@ -20,10 +20,10 @@ export function CausesSection() {
       >
         <div className="text-center space-y-4">
           <motion.h2 variants={staggerCardVariants} className="text-5xl font-bold" style={{ color: '#ffffff' }}>
-            Raíces <span className="gradient-text">Profundas</span> de la Aporofobia
+            Raices <span className="gradient-text">Profundas</span> de la Aporofobia
           </motion.h2>
           <motion.p variants={staggerCardVariants} className="text-xl max-w-3xl mx-auto" style={{ color: '#f0f0f0' }}>
-            Comprendiendo los factores estructurales que perpetúan la discriminación económica
+            Entendiendo los factores estructurales que hacen que siga existiendo la discriminacion economica
           </motion.p>
         </div>
 
@@ -81,13 +81,7 @@ export function CausesSection() {
                     {cause.description}
                   </p>
 
-                  {/* Línea animada */}
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
-                    className="h-1 bg-gradient-to-r from-accent-light to-accent-dark mt-6 rounded-full"
-                  />
+
                 </div>
               </motion.div>
             </motion.div>
@@ -114,7 +108,7 @@ export function CausesSection() {
               className="text-lg italic max-w-2xl mx-auto leading-relaxed"
               style={{ color: '#f0f0f0' }}
             >
-              "La aporofobia no surge del vacío. Es producto de sistemas, narrativas y estructuras que hemos construido colectivamente. Desmantelarla requiere el mismo esfuerzo conjunto."
+              "La aporofobia no sale de la nada. Es producto de sistemas, historias y estructuras que construimos entre todos. Para desarmala hace falta el mismo esfuerzo conjunto."
             </motion.p>
           </div>
         </motion.div>
