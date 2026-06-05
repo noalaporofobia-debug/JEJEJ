@@ -13,7 +13,7 @@ export function ActionPlanSection() {
       id="action-section"
       className="section-container"
       role="region"
-      aria-label="Plan de acción contra la aporofobia"
+      aria-label="Plan de accion contra la aporofobia"
     >
       <motion.div
         variants={staggerContainerVariants}
@@ -24,10 +24,10 @@ export function ActionPlanSection() {
       >
         <div className="text-center space-y-4 max-w-3xl mx-auto">
           <motion.h2 variants={staggerCardVariants} className="text-5xl font-bold" style={{ color: '#ffffff' }}>
-            Plan de <span className="gradient-text">Acción</span>
+            Plan de <span className="gradient-text">Accion</span>
           </motion.h2>
           <motion.p variants={staggerCardVariants} className="text-xl" style={{ color: '#f0f0f0' }}>
-            Pasos concretos que puedes tomar ahora para combatir la aporofobia en tu comunidad
+            Pasos concretos que podes hacer ahora para combatir la aporofobia en tu comunidad
           </motion.p>
         </div>
 
@@ -88,7 +88,7 @@ export function ActionPlanSection() {
                       className="space-y-4"
                     >
                       <p style={{ color: '#f0f0f0' }} className="text-lg font-semibold">
-                        Acciones específicas:
+                        Acciones concretas:
                       </p>
                       <ul className="space-y-3">
                         {plan.actions.map((action, i) => (

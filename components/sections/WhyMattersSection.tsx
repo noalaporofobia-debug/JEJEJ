@@ -9,7 +9,7 @@ export function WhyMattersSection() {
     <section 
       className="section-container"
       role="region"
-      aria-label="Por qué la aporofobia importa"
+      aria-label="Por que la aporofobia importa"
     >
       <motion.div
         initial="hidden"
@@ -20,10 +20,10 @@ export function WhyMattersSection() {
       >
         <div className="text-center space-y-4 mb-16">
           <motion.h2 variants={staggerCardVariants} className="text-4xl md:text-5xl font-bold" style={{ color: '#ffffff' }}>
-            ¿Por qué <span className="gradient-text">importa?</span>
+            ¿Por que <span className="gradient-text">importa?</span>
           </motion.h2>
           <motion.p variants={staggerCardVariants} className="text-lg max-w-2xl mx-auto" style={{ color: '#f0f0f0' }}>
-            La desigualdad económica es una realidad global que requiere nuestra atención y acción inmediata.
+            La desigualdad economica es una realidad global que necesita nuestra atencion y accion ya.
           </motion.p>
         </div>
 
@@ -63,10 +63,10 @@ export function WhyMattersSection() {
           <div className="absolute top-0 right-0 w-32 h-32 bg-accent-light/5 rounded-bl-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           <div className="relative z-10">
             <h3 className="text-2xl font-semibold mb-4" style={{ color: '#ffffff' }}>
-              La solución está en nosotros
+              La solucion esta en nosotros
             </h3>
             <p className="leading-relaxed" style={{ color: '#f0f0f0' }}>
-              Cada acción cuenta. Desde educarnos sobre estos temas hasta defender a quienes sufren discriminación, todos podemos contribuir a cambiar esta realidad. La conciencia es el primer paso hacia el cambio.
+              Cada accion cuenta. Desde informarnos sobre estos temas hasta defender a quienes sufren discriminacion, todos podemos aportar para cambiar esta realidad. Tomar conciencia es el primer paso hacia el cambio.
             </p>
           </div>
         </motion.div>

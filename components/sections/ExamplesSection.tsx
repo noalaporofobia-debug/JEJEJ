@@ -70,7 +70,7 @@ export function ExamplesSection() {
     {
       icon: '🏠',
       title: 'Vivienda',
-      description: 'Discriminacion al acceder a un hogar por falta de recursos economicos o historial crediticio.',
+      description: 'Discriminacion para acceder a un hogar por falta de plata o historial crediticio.',
       stats: '40%',
       statsLabel: 'sin hogar estable',
       gradient: 'from-orange-500 to-red-500',
@@ -80,13 +80,13 @@ export function ExamplesSection() {
       title: 'Educacion',
       description: 'Estigmatizacion en escuelas por no poder acceder a recursos educativos o materiales caros.',
       stats: '258M',
-      statsLabel: 'ninos sin escuela',
+      statsLabel: 'chicos sin escuela',
       gradient: 'from-blue-500 to-purple-500',
     },
     {
       icon: '💼',
       title: 'Empleo',
-      description: 'Rechazos en entrevistas basados en apariencia, codigo postal o antecedentes socioeconomicos.',
+      description: 'Rechazos en entrevistas basados en apariencia, barrio o situacion socioeconomica.',
       stats: '67%',
       statsLabel: 'desempleo juvenil',
       gradient: 'from-green-500 to-teal-500',
@@ -94,7 +94,7 @@ export function ExamplesSection() {
     {
       icon: '🏥',
       title: 'Salud',
-      description: 'Trato discriminatorio en centros de salud o denegacion de servicios por falta de pago.',
+      description: 'Trato discriminatorio en centros de salud o negacion de servicios por no poder pagar.',
       stats: '400M',
       statsLabel: 'sin atencion medica',
       gradient: 'from-pink-500 to-rose-500',
@@ -168,7 +168,7 @@ export function ExamplesSection() {
             className="text-lg md:text-xl max-w-2xl mx-auto"
             style={{ color: '#9ca3af' }}
           >
-            La aporofobia se manifiesta en multiples aspectos de la sociedad
+            La aporofobia se ve en muchos aspectos de la sociedad
           </motion.p>
         </motion.div>
 

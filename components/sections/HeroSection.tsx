@@ -236,7 +236,7 @@ export function HeroSection() {
             transition={{ duration: 0.8, delay: 2 }}
             className="gradient-text font-semibold"
           >
-            Aprende que es y como combatirla.
+            Enterate que es y como combatirla.
           </motion.span>
         </motion.p>
 
@@ -250,7 +250,7 @@ export function HeroSection() {
           {[
             { value: '700M+', label: 'En pobreza extrema' },
             { value: '1/10', label: 'De la poblacion mundial' },
-            { value: '2017', label: 'Reconocida en España' },
+            { value: '2017', label: 'Reconocida en Espana' },
           ].map((stat, i) => (
             <motion.div
               key={i}

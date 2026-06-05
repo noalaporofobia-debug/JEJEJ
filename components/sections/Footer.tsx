@@ -72,7 +72,7 @@ export function Footer() {
             © {currentYear} No a la Aporofobia. Todos los derechos reservados.
           </p>
           <p className="text-xs" style={{ color: '#6b7280' }}>
-            Promoviendo conciencia sobre la discriminación económica
+            Generando conciencia sobre la discriminacion economica
           </p>
         </div>
       </motion.div>
