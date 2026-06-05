@@ -156,17 +156,10 @@ export function ExamplesSection() {
           >
             Ejemplos en la{' '}
             <motion.span 
-              className="gradient-text inline-block relative"
+              className="gradient-text inline-block"
               whileHover={{ scale: 1.05 }}
             >
               Vida Real
-              <motion.span
-                className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.8 }}
-              />
             </motion.span>
           </motion.h2>
 
@@ -252,40 +245,7 @@ export function ExamplesSection() {
           ))}
         </div>
 
-        {/* Call to action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.8 }}
-          className="mt-16 text-center"
-        >
-          <motion.button
-            whileHover={{ scale: 1.05, boxShadow: '0 20px 40px rgba(59, 130, 246, 0.3)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-xl font-semibold text-white relative overflow-hidden group"
-            style={{
-              background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.2))',
-              border: '1px solid rgba(59, 130, 246, 0.3)',
-            }}
-          >
-            <motion.span
-              className="absolute inset-0 bg-gradient-to-r from-blue-500/20 to-purple-500/20"
-              initial={{ x: '-100%' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.5 }}
-            />
-            <span className="relative z-10 flex items-center gap-2">
-              Ver mas ejemplos
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1, repeat: Infinity }}
-              >
-                →
-              </motion.span>
-            </span>
-          </motion.button>
-        </motion.div>
+
       </motion.div>
     </section>
   )

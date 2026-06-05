@@ -2,7 +2,6 @@
 
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
-import { floatVariants, bounceInVariants, pulseVariants } from '../animations'
 
 // Particulas flotantes
 function FloatingParticles() {
@@ -149,12 +148,6 @@ export function HeroSection() {
   
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
   const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
-  const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9])
-
-  const scrollToNext = () => {
-    const element = document.getElementById('examples-section')
-    element?.scrollIntoView({ behavior: 'smooth' })
-  }
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -202,7 +195,7 @@ export function HeroSection() {
       </div>
 
       <motion.div
-        style={{ y, opacity, scale }}
+        style={{ y, opacity }}
         className="text-center max-w-5xl mx-auto z-10"
       >
 
@@ -273,46 +266,7 @@ export function HeroSection() {
           ))}
         </motion.div>
 
-        {/* Botones de accion */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 3 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-        >
-          <motion.button
-            whileHover={{ 
-              scale: 1.05, 
-              boxShadow: '0 20px 40px rgba(59, 130, 246, 0.4)',
-            }}
-            whileTap={{ scale: 0.95 }}
-            onClick={scrollToNext}
-            className="button-primary text-lg px-8 py-4 relative overflow-hidden group"
-            aria-label="Conocer mas sobre aporofobia"
-          >
-            <motion.span
-              className="absolute inset-0 bg-white/20"
-              initial={{ x: '-100%', skewX: '-15deg' }}
-              whileHover={{ x: '100%' }}
-              transition={{ duration: 0.5 }}
-            />
-            <span className="relative z-10 flex items-center gap-2">
-              Descubre mas
-              <motion.svg 
-                className="w-5 h-5" 
-                fill="none" 
-                stroke="currentColor" 
-                viewBox="0 0 24 24"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 1.5, repeat: Infinity }}
-              >
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </motion.svg>
-            </span>
-          </motion.button>
 
-
-        </motion.div>
 
 
       </motion.div>
