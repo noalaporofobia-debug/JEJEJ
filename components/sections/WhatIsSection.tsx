@@ -21,27 +21,6 @@ export function WhatIsSection() {
       icon: '🔍',
       color: '#3b82f6',
     },
-    {
-      title: 'Un Problema Real',
-      description:
-        'Afecta a millones de personas en todo el mundo. Se manifiesta en la educacion, el trabajo, la salud y el acceso a servicios basicos.',
-      icon: '⚠️',
-      color: '#f59e0b',
-    },
-    {
-      title: 'Consecuencias Graves',
-      description:
-        'Perpetua la desigualdad, limita oportunidades y dana la dignidad de las personas. Afecta la salud mental y fisica de quienes la sufren.',
-      icon: '💔',
-      color: '#ef4444',
-    },
-    {
-      title: 'Combatir Juntos',
-      description:
-        'La conciencia y educacion son clave. Reconocer nuestros prejuicios es el primer paso para construir una sociedad mas justa e inclusiva.',
-      icon: '🤝',
-      color: '#10b981',
-    },
   ]
 
   return (
@@ -92,23 +71,6 @@ export function WhatIsSection() {
               Aporofobia
             </motion.span>
           </motion.h2>
-          <motion.div 
-            variants={staggerCardVariants} 
-            className="h-1 mx-auto max-w-xs relative overflow-hidden rounded-full"
-            style={{ background: 'rgba(59, 130, 246, 0.2)' }}
-          >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600"
-              animate={{
-                x: ['-100%', '100%'],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-            />
-          </motion.div>
           <motion.p
             variants={staggerCardVariants}
             className="mt-6 text-lg max-w-2xl mx-auto"
@@ -118,8 +80,8 @@ export function WhatIsSection() {
           </motion.p>
         </motion.div>
 
-        {/* Cards grid with alternating animations */}
-        <div className="grid md:grid-cols-2 gap-8">
+        {/* Card centered */}
+        <div className="max-w-2xl mx-auto">
           {definitions.map((item, index) => (
             <motion.div
               key={index}
@@ -139,7 +101,7 @@ export function WhatIsSection() {
               
 
 
-              {/* Number badge with animation */}
+              {/* Icon with animation */}
               <motion.div 
                 className="inline-flex items-center gap-3 mb-4"
                 whileHover={{ x: 5 }}
@@ -157,15 +119,6 @@ export function WhatIsSection() {
                 >
                   {item.icon}
                 </motion.span>
-                <div 
-                  className="px-3 py-1 rounded-full text-sm font-bold"
-                  style={{ 
-                    background: `${item.color}20`,
-                    color: item.color,
-                  }}
-                >
-                  0{index + 1}
-                </div>
               </motion.div>
 
               {/* Title */}
