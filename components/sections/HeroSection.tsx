@@ -200,9 +200,9 @@ export function HeroSection() {
           }}
           transition={{ type: 'spring', stiffness: 150, damping: 15 }}
         >
-          <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance leading-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-balance leading-tight">
             <AnimatedTitle text="No a la " />
-            <br className="hidden md:block" />
+            <br />
             <AnimatedTitle text="Aporofobia" gradient />
           </h1>
         </motion.div>

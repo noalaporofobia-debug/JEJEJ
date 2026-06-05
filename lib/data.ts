@@ -244,7 +244,7 @@ export const actionPlan = [
   },
   {
     step: 3,
-    title: 'Ensena',
+    title: 'Enseña',
     description: 'Contale a otros por que es importante combatir la aporofobia',
     actions: [
       'Comparti informacion en redes sociales',
