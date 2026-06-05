@@ -152,7 +152,7 @@ export function HeroSection() {
   const scale = useTransform(scrollYProgress, [0, 0.5], [1, 0.9])
 
   const scrollToNext = () => {
-    const element = document.getElementById('what-is-section')
+    const element = document.getElementById('examples-section')
     element?.scrollIntoView({ behavior: 'smooth' })
   }
 
@@ -205,36 +205,7 @@ export function HeroSection() {
         style={{ y, opacity, scale }}
         className="text-center max-w-5xl mx-auto z-10"
       >
-        {/* Badge animado */}
-        <motion.div
-          initial={{ opacity: 0, y: -20, scale: 0.9 }}
-          animate={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ duration: 0.6 }}
-          className="mb-8 inline-block"
-        >
-          <motion.span
-            className="px-4 py-2 rounded-full text-sm font-medium inline-flex items-center gap-2"
-            style={{
-              background: 'rgba(59, 130, 246, 0.1)',
-              border: '1px solid rgba(59, 130, 246, 0.3)',
-              color: '#3b82f6',
-            }}
-            animate={{
-              boxShadow: [
-                '0 0 0 0 rgba(59, 130, 246, 0.4)',
-                '0 0 0 10px rgba(59, 130, 246, 0)',
-              ],
-            }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            <motion.span
-              className="w-2 h-2 rounded-full bg-blue-500"
-              animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            />
-            Proyecto de Conciencia Social 2026
-          </motion.span>
-        </motion.div>
+
 
         {/* Titulo principal con efecto parallax del mouse */}
         <motion.div
@@ -340,67 +311,10 @@ export function HeroSection() {
             </span>
           </motion.button>
 
-          <motion.button
-            whileHover={{ scale: 1.05, backgroundColor: 'rgba(59, 130, 246, 0.1)' }}
-            whileTap={{ scale: 0.95 }}
-            className="px-8 py-4 rounded-lg font-semibold border border-white/20 text-white/80 hover:text-white transition-all"
-          >
-            Ver estadisticas
-          </motion.button>
+
         </motion.div>
 
-        {/* Scroll indicator mejorado */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 3.5 }}
-          className="mt-16 md:mt-24 flex flex-col items-center gap-2"
-        >
-          <motion.span
-            className="text-xs uppercase tracking-widest"
-            style={{ color: '#6b7280' }}
-            animate={{ opacity: [0.5, 1, 0.5] }}
-            transition={{ duration: 2, repeat: Infinity }}
-          >
-            Scroll para explorar
-          </motion.span>
-          <motion.button
-            onClick={scrollToNext}
-            className="p-3 rounded-full relative"
-            style={{
-              border: '2px solid rgba(59, 130, 246, 0.3)',
-              background: 'rgba(59, 130, 246, 0.05)',
-            }}
-            whileHover={{ scale: 1.1, borderColor: 'rgba(59, 130, 246, 0.6)' }}
-            aria-label="Desplazarse hacia abajo"
-          >
-            <motion.div
-              className="absolute inset-0 rounded-full"
-              style={{ border: '2px solid rgba(59, 130, 246, 0.5)' }}
-              animate={{
-                scale: [1, 1.5, 1.5],
-                opacity: [0.5, 0, 0],
-              }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-            <motion.svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              style={{ color: '#3b82f6' }}
-              animate={{ y: [0, 5, 0] }}
-              transition={{ duration: 1.5, repeat: Infinity }}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 14l-7 7m0 0l-7-7m7 7V3"
-              />
-            </motion.svg>
-          </motion.button>
-        </motion.div>
+
       </motion.div>
     </section>
   )

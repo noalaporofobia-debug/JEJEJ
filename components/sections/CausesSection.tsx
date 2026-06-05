@@ -81,13 +81,7 @@ export function CausesSection() {
                     {cause.description}
                   </p>
 
-                  {/* Línea animada */}
-                  <motion.div
-                    initial={{ scaleX: 0 }}
-                    whileHover={{ scaleX: 1 }}
-                    transition={{ duration: 0.3 }}
-                    className="h-1 bg-gradient-to-r from-accent-light to-accent-dark mt-6 rounded-full"
-                  />
+
                 </div>
               </motion.div>
             </motion.div>

@@ -40,7 +40,7 @@ export function Footer() {
             Inicio
           </motion.a>
           <motion.a 
-            href="#what-is-section" 
+            href="#examples-section" 
             className="smooth-transition hover:text-accent-light group" 
             style={{ color: '#9ca3af' }}
             whileHover={{ scale: 1.1 }}

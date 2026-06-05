@@ -17,9 +17,7 @@ export function Navigation() {
 
   const navLinks = [
     { label: 'Inicio', href: '#hero-section' },
-    { label: 'Qué es', href: '#what-is-section' },
     { label: 'Ejemplos', href: '#examples-section' },
-    { label: 'Impacto', href: '#impact-section' },
     { label: 'Acciones', href: '#action-section' },
   ]
 
@@ -66,13 +64,7 @@ export function Navigation() {
           ))}
         </div>
 
-        <motion.button
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          className="button-primary text-sm"
-        >
-          Únete
-        </motion.button>
+
       </div>
     </motion.nav>
   )

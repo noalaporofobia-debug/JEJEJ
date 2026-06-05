@@ -103,6 +103,7 @@ export function ExamplesSection() {
 
   return (
     <section 
+      id="examples-section"
       className="section-container relative overflow-hidden"
       role="region"
       aria-label="Ejemplos en la vida real"
@@ -245,16 +246,7 @@ export function ExamplesSection() {
                   {example.description}
                 </p>
 
-                {/* Bottom progress bar */}
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 h-1"
-                  initial={{ scaleX: 0 }}
-                  whileInView={{ scaleX: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5 + index * 0.1, duration: 0.8 }}
-                >
-                  <div className={`h-full bg-gradient-to-r ${example.gradient}`} />
-                </motion.div>
+
               </motion.div>
             </TiltCard>
           ))}
