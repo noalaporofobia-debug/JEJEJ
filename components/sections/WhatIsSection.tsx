@@ -21,6 +21,27 @@ export function WhatIsSection() {
       icon: '🔍',
       color: '#3b82f6',
     },
+    {
+      title: 'Un Problema Real',
+      description:
+        'Afecta a millones de personas en todo el mundo. Se manifiesta en la educacion, el trabajo, la salud y el acceso a servicios basicos.',
+      icon: '⚠️',
+      color: '#f59e0b',
+    },
+    {
+      title: 'Consecuencias Graves',
+      description:
+        'Perpetua la desigualdad, limita oportunidades y dana la dignidad de las personas. Afecta la salud mental y fisica de quienes la sufren.',
+      icon: '💔',
+      color: '#ef4444',
+    },
+    {
+      title: 'Combatir Juntos',
+      description:
+        'La conciencia y educacion son clave. Reconocer nuestros prejuicios es el primer paso para construir una sociedad mas justa e inclusiva.',
+      icon: '🤝',
+      color: '#10b981',
+    },
   ]
 
   return (
@@ -80,8 +101,8 @@ export function WhatIsSection() {
           </motion.p>
         </motion.div>
 
-        {/* Card centered */}
-        <div className="max-w-2xl mx-auto">
+        {/* Cards grid */}
+        <div className="grid md:grid-cols-2 gap-8">
           {definitions.map((item, index) => (
             <motion.div
               key={index}
