@@ -1,6 +1,6 @@
 'use client'
 
-import { motion, useScroll, useTransform } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { useRef, useEffect, useState } from 'react'
 
 // Particulas flotantes
@@ -141,13 +141,6 @@ function LightRays() {
 
 export function HeroSection() {
   const ref = useRef<HTMLElement>(null)
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ['start start', 'end start'],
-  })
-  
-  const y = useTransform(scrollYProgress, [0, 1], ['0%', '50%'])
-  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
@@ -194,8 +187,7 @@ export function HeroSection() {
         />
       </div>
 
-      <motion.div
-        style={{ y, opacity }}
+      <div
         className="text-center max-w-5xl mx-auto z-10"
       >
 
@@ -269,7 +261,7 @@ export function HeroSection() {
 
 
 
-      </motion.div>
+      </div>
     </section>
   )
 }

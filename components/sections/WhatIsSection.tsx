@@ -92,23 +92,6 @@ export function WhatIsSection() {
               Aporofobia
             </motion.span>
           </motion.h2>
-          <motion.div 
-            variants={staggerCardVariants} 
-            className="h-1 mx-auto max-w-xs relative overflow-hidden rounded-full"
-            style={{ background: 'rgba(59, 130, 246, 0.2)' }}
-          >
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600"
-              animate={{
-                x: ['-100%', '100%'],
-              }}
-              transition={{
-                duration: 2,
-                repeat: Infinity,
-                ease: 'linear',
-              }}
-            />
-          </motion.div>
           <motion.p
             variants={staggerCardVariants}
             className="mt-6 text-lg max-w-2xl mx-auto"
@@ -118,7 +101,7 @@ export function WhatIsSection() {
           </motion.p>
         </motion.div>
 
-        {/* Cards grid with alternating animations */}
+        {/* Cards grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {definitions.map((item, index) => (
             <motion.div
@@ -139,7 +122,7 @@ export function WhatIsSection() {
               
 
 
-              {/* Number badge with animation */}
+              {/* Icon with animation */}
               <motion.div 
                 className="inline-flex items-center gap-3 mb-4"
                 whileHover={{ x: 5 }}
@@ -157,15 +140,6 @@ export function WhatIsSection() {
                 >
                   {item.icon}
                 </motion.span>
-                <div 
-                  className="px-3 py-1 rounded-full text-sm font-bold"
-                  style={{ 
-                    background: `${item.color}20`,
-                    color: item.color,
-                  }}
-                >
-                  0{index + 1}
-                </div>
               </motion.div>
 
               {/* Title */}
