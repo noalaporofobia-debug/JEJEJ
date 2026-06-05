@@ -49,15 +49,9 @@ export function Navigation() {
             <motion.a
               key={i}
               href={link.href}
-              whileHover={{ y: -2 }}
+              whileHover={{ y: -2, color: '#3b82f6' }}
               className="transition-colors duration-300"
               style={{ color: '#f0f0f0' }}
-              onHoverStart={(e) => {
-                ;(e.currentTarget as HTMLElement).style.color = '#3b82f6'
-              }}
-              onHoverEnd={(e) => {
-                ;(e.currentTarget as HTMLElement).style.color = '#f0f0f0'
-              }}
             >
               {link.label}
             </motion.a>
